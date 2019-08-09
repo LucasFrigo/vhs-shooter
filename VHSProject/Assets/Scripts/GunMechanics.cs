@@ -6,11 +6,23 @@ public class GunMechanics : MonoBehaviour
     public float range = 100f;
     public Camera fpsCam;
 
+    Animator anim;
+
+
+    void Start()
+    {
+
+    }
+
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+           
+
+            Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
+            Debug.DrawRay(fpsCam.transform.position, forward, Color.green);
         }
     }
 
@@ -18,16 +30,16 @@ public class GunMechanics : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
-        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
             OnEnemyHit enemy = hit.transform.GetComponent<OnEnemyHit>();
-            if(enemy != null){
+            if (enemy != null) {
                 enemy.TakeDamage(damage);
             }
         }
-
-
     }
+
+   
 
 }
