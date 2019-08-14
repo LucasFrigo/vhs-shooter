@@ -18,9 +18,6 @@ public class BasicEnemyBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, moveTo.transform.position, speed * Time.deltaTime);
-        
-       
-
     }
 
     void ChangeXPosition()
