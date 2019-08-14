@@ -12,12 +12,12 @@ public class BasicEnemyBehaviour : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        InvokeRepeating("ChangeXPosition", 2.0f, 4.0f);
+        InvokeRepeating("ChangeXPosition", 2.0f, 0.5f);
     }
 
     void FixedUpdate()
     {
-        //transform.position = Vector3.MoveTowards(transform.position, moveTo.transform.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, moveTo.transform.position, speed * Time.deltaTime);
         
        
 
