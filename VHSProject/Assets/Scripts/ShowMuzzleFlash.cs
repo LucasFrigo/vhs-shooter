@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ShowMuzzleFlash : MonoBehaviour
 {
+    Animator muzzleAnimation;
+
+
     void Start()
     {
-        
+            muzzleAnimation = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
+        void Update()
     {
-        
+
     }
 }
