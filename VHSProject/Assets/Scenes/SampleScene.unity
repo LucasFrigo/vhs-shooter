@@ -1214,6 +1214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   moveTo: {fileID: 1112568430}
+  projectile: {fileID: 5276081503547137766, guid: 180777cd5d4a1a24cbe9813e8ffcde37,
+    type: 3}
 --- !u!1 &1772064094
 GameObject:
   m_ObjectHideFlags: 0
